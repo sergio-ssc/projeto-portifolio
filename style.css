@@ -226,9 +226,59 @@ article .video-container{
   cursor: pointer;
 }
 
+#projeto-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#projeto-container .projetos{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-width 0.4s;
+}
+
+#projeto-container .projetos:hover{
+  border-width: 10px;
+  cursor: pointer;
+}
+
+#projeto-container img{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+footer{
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 10px;
+}
+
 @media screen and (min-width: 768px){
   .skill-container{
     grid-template-columns: repeat(2, 1fr);
   }
+
+  #projeto-container .projetos{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
   
+  #projeto-container .projeto-info{
+    max-width: 80%;
+  }
+
+  #projeto-container img{
+    max-width: 20%;
+    aspect-ratio: 1/1;
+    max-height: 200px;
+  }
 }
